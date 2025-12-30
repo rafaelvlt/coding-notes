@@ -1,19 +1,25 @@
-# python-notes
+# coding-notes
 
-Repository for Python-specific studies, academic coursework, and technical literature.
+Repository for programming language studies, technical literature implementations, and university assignments.
 
 ## Contents
 
-- /university-ip-25.1: Problem sets and project from the Introduction to Programming course at CIn-UFPE.
-- /freecodecamp: Exercises divided into certification-projects, lab, and workshop from the Python Certification curriculum.
-- /fluent-python-book: Experiments and code based on the technical literature.
-- /automate-boring-stuff-book: Scripts i did for the book while learning from Roppers Academy some years ago
-- /random: Anything that doesn't fit in any of above and there's no external repo for it
+### /python
+- /university-ip-25.1: Problem sets from the Introduction to Programming course at CIn-UFPE.
+- /freecodecamp: Exercises and projects from the Python Certification curriculum.
+- /fluent-python-book: Implementations based on technical literature (Luciano Ramalho).
+- /automate-boring-stuff-book: Legacy scripts and exercises from Roppers Academy.
+- /random: Miscellaneous scripts and experiments.
+
+### /c
+- /university-fpi-25.2: Coursework for the Foundations of Imperative Programming course (CIn-UFPE).
+- /c-kn-king-book: Exercises from "C Programming: A Modern Approach" (K. N. King).
+- /modern-c-gustedt-book: Studies based on "Modern C" (Jens Gustedt).
+
+### /cpp
+- /learn-cpp: Exercises and syntax notes from learncpp.com.
 
 ## External Projects
 
-- [Pygame Project](https://github.com/rafaelvlt/bullet-heaven-pygame): Final project for the Introduction to Programming course.
-
-## License
-
-MIT
+- [Neptune's Spear](https://github.com/rafaelvlt/neptunes-spear-raylib-ecs): Final project for Foundations of Imperative Programming course(C/Raylib).
+- [IPocalipse Cinvivors](https://github.com/rafaelvlt/bullet-heaven-pygame): Final project for Introduction to Programming (Python/Pygame).
