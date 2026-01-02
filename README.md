@@ -21,5 +21,6 @@ Repository for programming language studies, technical literature implementation
 
 ## External Projects
 
-- [Neptune's Spear](https://github.com/rafaelvlt/neptunes-spear-raylib-ecs): Final project for Foundations of Imperative Programming course(C/Raylib).
-- [IPocalipse Cinvivors](https://github.com/rafaelvlt/bullet-heaven-pygame): Final project for Introduction to Programming (Python/Pygame).
+- [Neptune's Spear](https://github.com/rafaelvlt/neptunes-spear-raylib-ecs): 3D FPS Mecha game made as a final project for Foundations of Imperative Programming course(C/Raylib).
+- [IPocalipse Cinvivors](https://github.com/rafaelvlt/bullet-heaven-pygame): 2D Bullet Heaven game made as a final project for Introduction to Programming (Python/Pygame).
+- [casca-sh](https://github.com/rafaelvlt/casca-sh): Shell implementation from scrath developed as a personal project just for fun (C).
