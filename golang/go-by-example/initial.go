@@ -66,4 +66,6 @@ func main() {
 	testswitch()
 	testarrays()
 	testslices()
+	mapsteste()
+	testefuncoes()
 }
