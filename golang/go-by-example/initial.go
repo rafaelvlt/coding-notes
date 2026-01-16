@@ -64,4 +64,6 @@ func main() {
 
 	control()
 	testswitch()
+	testarrays()
+	testslices()
 }
