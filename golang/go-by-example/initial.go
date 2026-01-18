@@ -68,4 +68,8 @@ func main() {
 	testslices()
 	mapsteste()
 	testefuncoes()
+	testrange()
+	testpointers()
+	teststringsrunes()
+	teststructs()
 }
