@@ -72,4 +72,7 @@ func main() {
 	testpointers()
 	teststringsrunes()
 	teststructs()
+	testeenum()
+	testeiter()
+	testerror()
 }
