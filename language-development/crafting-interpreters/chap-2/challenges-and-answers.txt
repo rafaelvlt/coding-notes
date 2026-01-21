@@ -1,0 +1,11 @@
+1. Pick an open source implementation of a language you like. Download the source code and poke around in it. Try to find the code that implements the scanner and parser. Are they handwritten, or generated using tools like Lex and Yacc? (.l or .y files usually imply the latter.)
+
+Answer = Both the parser and scanner in Go are implemented with .go files, so both handwritten. and damn, 30k lines for go parser only...
+
+2. Just-in-time compilation tends to be the fastest way to implement dynamically typed languages, but not all of them use it. What reasons are there to not JIT?
+
+Answer = Seems better if it's not compiled internally, because the types could have different especifications for each architecture e.g: C++ having multiple sizes for the types depending on architecture. Probably JIT could cause errors for different architectures because it would change the behaviour intended
+
+3. Most Lisp implementations that compile to C also contain an interpreter that lets them execute Lisp code on the fly as well. Why?
+
+Answer = Probably for REPL? If the source is a big program i would it would be better to have it be compiled for better perfomance, but to have a REPL it's necessary to have an Interpreter
