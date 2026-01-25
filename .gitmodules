@@ -1,0 +1,3 @@
+[submodule "language-development/crafting-interpreters/crafting-interpreters-repo"]
+	path = language-development/crafting-interpreters/crafting-interpreters-repo
+	url = https://github.com/munificent/craftinginterpreters.git
