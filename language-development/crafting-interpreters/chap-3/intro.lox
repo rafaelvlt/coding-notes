@@ -1,0 +1,154 @@
+// comentário
+print "Hello, world!"; // <- semicolon, sem () pq print é statement
+
+// lox é pequena e high-level, c-like syntax e similar a Lua/Scheme
+// caracteristicas: 1. tipagem dinamica, 2. auto mem-management
+// para o 2. pode ser feito com reference counting ou GC, usaremos GC mesmo o 1. sendo mais simples
+
+// data types: 1. bool
+true;
+false;
+// 2. num, só tem float de 2 digitos de precisao
+1234;
+12.34;
+
+// 3. string
+"string";
+"";
+"123";
+
+// nil -> engual go, valor nulo
+nil;
+
+// expresões. operandos e operadores notação infixa
+123 + 12;
+6 - 7;
+42 * 0;
+6 / 9;
+
+// notação prefixa de negação
+-9;
+
+// Comparação e logicos
+// < <= > >= == !=
+// Podem ser usado entre tipos diferentes tranquilamente msm que dê false se n forem do msm tipo. só dá pra comparar numeros
+123 == "123"; // false
+
+// op logicos: ! ; and; or; python like, são control flow pq dao short circuit
+
+// precedencia e grouping
+// mesmas de C. pode usar () para priorizar
+var average = (2+2) / 2;
+
+// sem modulo, bitwise, ternario, etc
+
+
+// Statements!!
+// print é um deles, avalia uma expressão e mostra o resultado. uma expressão seguida de ; se torna um expression statement
+{
+  print "one";
+  print "two";
+}
+
+// variaveis declaradas com var keyword
+var teste = "valor";
+var nulo; // é nulo automaticamente se n inicializada
+
+teste = "outro valor";
+print teste;
+
+
+// control flow
+if (true) {
+  print "yes";
+} else {
+  print "no";
+}
+
+// loop também
+var a = 1;
+while (a < 10) {
+  print a;
+  a = a + 1;
+}
+
+// com for loop sintaxe de C
+for (var b = 1; b < 10; b = b + 1){
+  print b;
+}
+
+
+// funções em lox
+// função com parametros/formals a e b
+fun printSum(a, b) {
+  print a + b; // tem keyword return tb, retorna nil por default se n tiver
+}
+// sintaxe para callar, sempre com parenteses
+printSum(2, 5);
+// passando argumentos
+
+
+// Closures -> funções são valores que podemos referenciar em lox(First class).
+fun addPair(a, b){
+return a + b;
+}
+
+fun identity(a) {
+  return a;
+}
+
+print identity(addPair)(1, 2); // <- printa 3
+
+// pode declarar func dentro de outras tb, funciona igual python em geral
+
+// OOP -> Lox tem oop, mesmo tendo varias features de langs funcionais. ter objetos é util em langs dinamicamente tipadas para definir tipos compostos, com métodos tb.
+
+// Há dois meios de cobrir objetos, classes e prototypes.
+//Classes -> instancias e classes, primeiro guardando estado de objetos, e o segundo definindo metodos e heranças.
+// Prototype -> Juntam instancias e objetos no mesmo pote, cada objeto pode conter estados e métodos, podendo herdar entre sí também.
+// Iremos fazer classes
+
+// Em lox, é feito assim:
+class Breakfast {
+  init(meat, bread){
+    this.meat = meat;
+    this.bread = bread;
+  }
+  cook() {
+    print "Eggs a-fryin'!";
+  }
+
+  serve(who) {
+    print "Enjoy your breakfast, " + who + ".";
+  }
+}
+
+// métodos são declarados sem fun keyword. para instanciar:
+var qualquer = Breakfast("sausage", "teste");
+print qualquer;//breakfast instance
+
+// instantiation e init -> estado e behavior
+// pode adicionar fields a vontade em obj
+qualquer.meat = "sausage";
+qualquer.bread = "sordough";
+// para acessar de dentro de um obj usa this dentro da class
+
+// definimos initializer com init(), chamado ao criar
+var baconAndToast = Breakfast("Bacon", "toast");
+
+// sintaxe para herança
+class Brunch < Breakfast {
+  init(meat, bread, drink) {
+    super.init(meat, bread);
+    this.drink = drink;
+  }
+  drink() {
+    print "How about water?";
+  }
+}
+// tem acesso aos metodos da super e fields tb
+var benedict = Brunch("ham", "Muffin", "water");
+benedict.serve("Noble reader");
+//temos que calar super no init para adicionar mais fields
+
+// Standard Library -> funcionalidade implementada no interpretador. Em Lox é minima, quase ineexistente. Só queremos que funcione, mas em uma lang é essencial existir uma std lib. só teremos print e clock para benchmark

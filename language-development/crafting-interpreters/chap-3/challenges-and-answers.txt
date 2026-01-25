@@ -1,0 +1,11 @@
+1. Write some sample Lox programs and run them (you can use the implementations of Lox in my repository). Try to come up with edge case behavior I didn’t specify here. Does it do what you expect? Why or why not?
+
+Answer = file on this directory
+
+2. This informal introduction leaves a lot unspecified. List several open questions you have about the language’s syntax and semantics. What do you think the answers should be?
+
+Answer = como importar coisas como os built in? não sei, não pensei muito sobre. redefinição de func é permitido? i dont know
+
+3. Lox is a pretty tiny language. What features do you think it is missing that would make it annoying to use for real programs? (Aside from the standard library, of course.)
+
+Answer = Arrays com certeza, não tem tipo de lista/array, nem imagino como fazer data structures, só com objetos provavelmente
